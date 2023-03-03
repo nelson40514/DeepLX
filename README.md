@@ -2,7 +2,7 @@
  * @Author: Vincent Young
  * @Date: 2022-10-18 07:32:29
  * @LastEditors: Vincent Young
- * @LastEditTime: 2023-03-03 17:26:00
+ * @LastEditTime: 2023-03-04 02:16:28
  * @FilePath: /DeepLX/README.md
  * @Telegram: https://t.me/missuo
  * 
@@ -104,6 +104,7 @@ deeplx_linux_amd64 -p 27001
 2. Click on **Developer Settings** in the bottom left corner. **Enable Beta experimental features**.
 
 3. Set the URL.
+
 ![0779ecf8c7d7d1bee532b](https://missuo.ru/file/0779ecf8c7d7d1bee532b.png)
 
 ## Backup the Docker Image of zu1k
