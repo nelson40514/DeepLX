@@ -2,7 +2,7 @@
  * @Author: Vincent Young
  * @Date: 2022-10-18 07:32:29
  * @LastEditors: Vincent Young
- * @LastEditTime: 2023-03-03 02:30:52
+ * @LastEditTime: 2023-03-03 17:26:00
  * @FilePath: /DeepLX/README.md
  * @Telegram: https://t.me/missuo
  * 
@@ -88,7 +88,7 @@ systemctl enable deeplx
 You can change the default configuration in command line, such as setting the port:
 ```bash
 deeplx_linux_amd64 --port 27001
-#or shorthand
+# or shorthand
 deeplx_linux_amd64 -p 27001
 ```
 
