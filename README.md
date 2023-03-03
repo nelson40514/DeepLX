@@ -12,8 +12,7 @@
 Permanently free DeepL API written in Golang
 
 ## Description
-- `deeplx` in only run in port `1188`, later versions will do the specified port.
-- `deeplx` is listening to `0.0.0.0:1188` by default.
+- `deeplx` is listening to `0.0.0.0:1188` by default, you can change it to what you want.
 - `deeplx` is using `DeepL` Free API.
 - `deeplx` is unlimited to the number of requests.
 
@@ -83,6 +82,16 @@ systemctl daemon-reload
 systemctl enable deeplx
 
 ```
+
+### Configuration
+
+You can change the default configuration in command line, such as setting the port:
+```bash
+deeplx_linux_amd64 --port 27001
+#or shorthand
+deeplx_linux_amd64 -p 27001
+```
+
 ## Setup on [Bob App](https://bobtranslate.com/)
 1. Install [bob-plugin-deeplx](https://github.com/clubxdev/bob-plugin-deeplx) on Bob.
 

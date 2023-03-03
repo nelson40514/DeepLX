@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"io"
 	"log"
@@ -16,7 +17,17 @@ import (
 	"github.com/tidwall/gjson"
 )
 
+var port int
+
 func init() {
+	const (
+		defaultPort = 1188
+		usage       = "set up the port to listen on"
+	)
+
+	flag.IntVar(&port, "port", defaultPort, usage)
+	flag.IntVar(&port, "p", defaultPort, usage)
+
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 }
 
@@ -97,8 +108,11 @@ type ResData struct {
 }
 
 func main() {
+	// parse flags
+	flag.Parse()
+
 	// display information
-	fmt.Println("DeepL X has been successfully launched! Listening on 0.0.0.0:1188")
+	fmt.Printf("DeepL X has been successfully launched! Listening on 0.0.0.0:%v\n", port)
 	fmt.Println("Made by sjlleo and missuo.")
 
 	// create a random id
@@ -216,5 +230,5 @@ func main() {
 			}
 		}
 	})
-	r.Run(":1188") // listen and serve on 0.0.0.0:1188
+	r.Run(fmt.Sprintf(":%v", port)) //By default, listen and serve on 0.0.0.0:1188
 }
