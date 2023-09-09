@@ -11,4 +11,5 @@ RUN CGO_ENABLED=0 go build -a -installsuffix cgo -o deeplx .
 FROM alpine:latest
 WORKDIR /app
 COPY --from=builder /go/src/github.com/OwO-Network/DeepLX/deeplx /app/deeplx
+EXPOSE 1188
 CMD ["/app/deeplx"]
