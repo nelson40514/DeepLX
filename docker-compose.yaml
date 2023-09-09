@@ -5,4 +5,4 @@ services:
     image: ghcr.io/owo-network/deeplx:latest
     restart: always
     ports:
-      - "1188:1188"
+      - "80:1188"
